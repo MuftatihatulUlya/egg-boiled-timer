@@ -22,7 +22,12 @@ const startTime = () => {
         
         if (timeleft <= 0) { 
             clearInterval(interval);
-            interval = null; 
+            interval = null;
+            const alarmSound = new Audio ("audio.mp3");
+            alarmsound loop = true;
+            alarmSound.play().catch (error => {
+                console.log("alarm gagal diputar", error);
+            });
             alert("Dah mateng! Telur rebusnya sudah siap 🥚✨");
             timeleft = 406; 
             updateTimer();
