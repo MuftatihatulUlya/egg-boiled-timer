@@ -78,19 +78,19 @@ const startTime = () => {
             clearInterval(interval);
             interval = null;
 
-            // --- PERBAIKAN DI BAGIAN INI ---
-            const alarmSound = new Audio("audio.mp3");
-            alarmSound.loop = true; // Menggunakan titik (.) dan huruf kecil konsisten
+            // // --- PERBAIKAN DI BAGIAN INI ---
+            // const alarmSound = new Audio("audio.mp3");
+            // alarmSound.loop = true; // Menggunakan titik (.) dan huruf kecil konsisten
             
-            alarmSound.play().catch(error => {
-                console.log("alarm gagal diputar", error);
-            });
+            // alarmSound.play().catch(error => {
+            //     console.log("alarm gagal diputar", error);
+            // });
 
-            alert("Dah mateng! Telur rebusnya sudah siap 🥚✨");
+            // alert("Dah mateng! Telur rebusnya sudah siap 🥚✨");
 
-            // Matikan suara setelah tombol OK pada alert diklik
-            alarmSound.pause(); 
-            // -------------------------------
+            // // Matikan suara setelah tombol OK pada alert diklik
+            // alarmSound.pause(); 
+            // // -------------------------------
 
             timeleft = 406; 
             updateTimer();
