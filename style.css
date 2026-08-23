@@ -28,7 +28,7 @@ body {
     box-sizing: border-box;
 }
 
-#H1 {
+/* #H1 {
     color: rgb(181, 108, 48);
     font-size: 2.5rem;      
     font-family: "Press Start 2P", system-ui;
@@ -36,6 +36,16 @@ body {
     margin-top: 0;           
     margin-bottom: 30px;
     text-align: center;      
+} */
+
+#H1 {
+    color: rgb(181, 108, 48);
+    font-size: 4rem; /* Ukuran besar untuk desktop */
+    font-family: "Press Start 2P", system-ui;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 #container {
@@ -101,4 +111,22 @@ body {
 
 #resetbtn:hover {
     background-color: rgb(245, 209, 118);
+}
+
+@media screen and (max-width: 768px) {
+    #H1 {
+        font-size: 1.8rem; /* Ukuran font dikecilkan khusus di HP agar muat & tidak terlalu besar */
+        margin-top: 20px;  /* Jarak atas disesuaikan agar tidak terlalu ke atas */
+        margin-bottom: 20px;
+    }
+
+    #container {
+        width: 90%;        /* Membuat kotak timer menyesuaikan lebar layar HP */
+        max-width: 350px;  /* Batas maksimal lebar kotak */
+        padding: 20px;
+    }
+
+    #display {
+        font-size: 3rem;   /* Angka timer di HP ikut disesuaikan */
+    }
 }
