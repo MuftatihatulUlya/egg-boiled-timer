@@ -3,7 +3,7 @@ const start = document.getElementById("startbtn")
 const pause = document.getElementById("pausebtn")
 const reset = document.getElementById("resetbtn")
 
-let timeleft = 406;
+let timeleft = 5;
 let interval = null; 
 
 const updateTimer = () => {
@@ -39,7 +39,7 @@ const startTime = () => {
 const resetTime = () => {
     clearInterval(interval);
     interval = null; 
-    timeleft = 406;
+    timeleft = 5;
     updateTimer();
 }
 
