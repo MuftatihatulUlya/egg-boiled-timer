@@ -30,7 +30,7 @@ const startTime = () => {
             });
             alert("Dah mateng! Telur rebusmu dah siap 🥚✨");
             alarmSound.pause();
-            timeleft = 406; 
+            timeleft = 5; 
             updateTimer();
         }
     }, 1000); 
