@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamago Boiled's Timer</title>
+    <title>Boiled Tamago"s Timer 🥚✨</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel = 'stylesheet' href = "style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="H1">Boiled Tamago's Timer</h1>
-    <div id="container">
-        <div id="display">
-            06:46
-        </div>
-        <div id="operator">
+    <div id="border">
+    <!-- Halaman menu -->
+    <div id="halamanMenu">
+        <h1>Hola Minasann~~</h1>
+        <h1>Selamat Datang Wahai Pecinta Telur Rebus 🐣</h1>
+        <h1>Pilih durasi telur rebusmu! 🥚</h1>
+        <button onclick="selectDuration(360, 'Soft Boiled 🥚')" class="mainbtn">
+        🥚 Soft Boiled
+        </button>
+        <button onclick="selectDuration(450, 'Medium Boiled 🥚')" class="mainbtn">
+        🥚 Medium Boiled
+        </button>
+        <button onclick="selectDuration(540, 'Hard Boiled 🥚')" class="mainbtn">
+        🥚 Hard Boiled
+        </button>
+    </div>
+    <!-- Halaman timer -->
+    
+    <div id="halamanTimer" style="display: none;">
+        <!-- <div id="tombol"> -->
+        <h2 id="titleSelected">Judul Pilihan</h2>
+        <!-- layar timer -->
+        <div id="display">06:00</div>
+        <!-- tombol kontrol -->
+        <div class="control-buttons">
             <button id="startbtn">Start</button>
             <button id="pausebtn">Pause</button>
             <button id="resetbtn">Reset</button>
         </div>
+        <br>
+        <!-- tombol kembali ke menu -->
+        <button onclick="backToMenu()" id="backToMenu">Back to Main Menu</button>
     </div>
-    <script src="main.js">
-    </script>
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
