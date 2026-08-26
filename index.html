@@ -25,12 +25,19 @@
         </button>
     </div>
     <!-- Halaman timer -->
+<div id="halamanTimer" style="display: none;">
+    <div id="timerSection">
+    <h2 id="titleSelected"></h2>
     
-    <div id="halamanTimer" style="display: none;">
-        <!-- <div id="tombol"> -->
-        <h2 id="titleSelected">Judul Pilihan</h2>
-        <!-- layar timer -->
-        <div id="display">06:00</div>
+        <div id="display"></div>
+        
+        <div>
+            <button onclick="addTime(15)" class="addbtn">+15s</button>
+            <button onclick="addTime(30)" class="addbtn">+30s</button>
+            <button onclick="addTime(45)" class="addbtn">+45s</button>
+            <button onclick="addTime(60)" class="addbtn">+60s</button>
+        </div>
+
         <!-- tombol kontrol -->
         <div class="control-buttons">
             <button id="startbtn">Start</button>
@@ -39,9 +46,16 @@
         </div>
         <br>
         <!-- tombol kembali ke menu -->
-        <button onclick="backToMenu()" id="backToMenu">Back to Main Menu</button>
+    <button onclick="backToMenu()" id="backToMenu">Back to Main Menu</button>
     </div>
+
+    <!-- Kotak Notifikasi (Awalnya tersembunyi, posisinya berdiri sendiri) -->
+    <div id="notifStop" style="display: none;">
+        <p>Dah mateng! Telur rebusmu dah siap 🥚✨</p>
+        <button id="tutupNotif">OKOK</button>
     </div>
+    
+</div>
 <script src="main.js"></script>
 </body>
 </html>
