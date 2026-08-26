@@ -54,7 +54,46 @@ body {
     margin-bottom: 20px;
     font-family:"Press Start 2P", system-ui;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+#notifStop p {
+    color: rgb(181, 108, 48);
+    font-size: 20px !important;
+    margin: 0 0 10px 0;
+}
+
+#tutupNotif {
+    border: 1px solid rgba(255, 255, 255, 0.546);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.705);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 130px;
+    min-height: 30px;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+#tutupNotif:hover {
+    background-color: rgb(245, 209, 118);
+}
+
+.addbtn {
+    border: 1px solid rgba(255, 255, 255, 0.546);
+    border-radius: 50%;
+    background-color: rgb(245, 209, 118);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* width: 130px; */
+    min-height: 30px;
+    font-family: sans-serif;
+    margin: 15px;
+}
+
+.addbtn:hover {
+    background-color: rgb(245, 209, 118);
 }
 
 #startbtn {
