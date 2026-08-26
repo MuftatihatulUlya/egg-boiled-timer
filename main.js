@@ -7,6 +7,9 @@ const reset = document.getElementById("resetbtn");
 const halamanMenu = document.getElementById("halamanMenu");
 const halamanTimer = document.getElementById("halamanTimer");
 const titleSelected = document.getElementById("titleSelected");
+const tutupNotif = document.getElementById("tutupNotif");
+const notifStop = document.getElementById("notifStop");
+const timer = document.getElementById("timerSection");
 
 let timeleft = 360;
 let selectedDuration = 360;
@@ -37,6 +40,7 @@ const backToMenu = () => {
     interval = null;
     alarmSound.pause();
     alarmSound.currentTime = 0;
+    notifStop.style.display = "none";
 
     halamanMenu.style.display = "block";
     halamanTimer.style.display = "none";
@@ -58,17 +62,25 @@ const startTime = () => {
             }).catch(error => {
                 console.log("alarm gagal diputar", error);
             });
-            
-            setTimeout(() => {
-                alert("Dah mateng! Telur rebusmu dah siap 🥚✨");
-                alarmSound.pause();
-                alarmSound.currentTime = 0;
-            }, 100);
+            notifStop.style.display = "block";
+            timer.style.display = "none";
             
             timeleft = selectedDuration; 
             updateTimer();
-        }
+        };
     }, 1000); 
+};
+
+const addTime = (add) => {
+    timeleft += add;
+    updateTimer();
+}
+
+const closeNotif = () => {
+    alarmSound.pause();
+    alarmSound.currentTime = 0;
+    notifStop.style.display = "none";
+    timer.style.display = "block";
 };
 
 const resetTime = () => {
@@ -89,5 +101,6 @@ const pauseTime = () => {
 start.addEventListener("click", startTime);
 pause.addEventListener("click", pauseTime);
 reset.addEventListener("click", resetTime);
+tutupNotif.addEventListener("click", closeNotif);
 
 updateTimer();
