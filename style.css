@@ -40,8 +40,8 @@ body {
 
 .circleContainer {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     margin: 10px auto;
 } 
 
@@ -56,30 +56,30 @@ body {
 
 .progress-ring {
     transform: rotate(-90deg);
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
 }
 
 .progressRingBackground{
-    cx: 150;
-    cy: 150;
-    r: 130;
+    cx: 120;
+    cy: 120;
+    r: 105;
     fill: none;
     stroke: rgba(255, 255, 255, 0.3);
     stroke-width: 10px;
 }
 
 .progressRing-Bar{
-    cx: 150;
-    cy: 150;
-    r: 130;
+    cx: 120;
+    cy: 120;
+    r: 105;
     fill: none;
     stroke: rgb(181, 108, 48);
     stroke-width: 10px;
     stroke-linecap: round;
 
-    stroke-dasharray: 816;
-    stroke-dashoffset: 816;
+    stroke-dasharray: 660;
+    stroke-dashoffset: 660;
 
     transition: stroke-dashoffset 0.3s ease;
 }
