@@ -26,11 +26,17 @@
     </div>
     <!-- Halaman timer -->
 <div id="halamanTimer" style="display: none;">
-    <div id="timerSection">
-    <h2 id="titleSelected"></h2>
-    
-        <div id="display"></div>
-        
+    <div class="circleContainer">
+        <svg class="progress-ring" width="300" height="300">
+            <circle class="progressRingBackground"/>
+            <circle id="progressRingBar" class="progressRing-Bar"/>
+        </svg>
+        <div id="timerContent">
+            <h2 id="titleSelected"></h2>
+            <div id="display"></div>
+        </div>
+    </div>
+
         <div>
             <button onclick="addTime(15)" class="addbtn">+15s</button>
             <button onclick="addTime(30)" class="addbtn">+30s</button>
@@ -48,6 +54,7 @@
         <!-- tombol kembali ke menu -->
     <button onclick="backToMenu()" id="backToMenu">Back to Main Menu</button>
     </div>
+    
 
     <!-- Kotak Notifikasi (Awalnya tersembunyi, posisinya berdiri sendiri) -->
     <div id="notifStop" style="display: none;">
