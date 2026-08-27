@@ -10,8 +10,10 @@ const titleSelected = document.getElementById("titleSelected");
 const tutupNotif = document.getElementById("tutupNotif");
 const notifStop = document.getElementById("notifStop");
 const timer = document.getElementById("timerSection");
+const garisJalan = document.getElementById("progressRingBar");
 
-let timeleft = 360;
+let timeleft = 360; 
+// sisa waktu
 let selectedDuration = 360;
 let interval = null; 
 
@@ -21,7 +23,9 @@ alarmSound.loop = true;
 const updateTimer = () => {
     const minutes = Math.floor(timeleft / 60);
     const seconds = timeleft % 60;
+    const progress = (timeleft/selectedDuration) * 816;
 
+    garisJalan.style.strokeDashoffset = progress;
     display.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
 
@@ -70,6 +74,8 @@ const startTime = () => {
         };
     }, 1000); 
 };
+
+
 
 const addTime = (add) => {
     timeleft += add;
