@@ -23,7 +23,7 @@ alarmSound.loop = true;
 const updateTimer = () => {
     const minutes = Math.floor(timeleft / 60);
     const seconds = timeleft % 60;
-    const progress = (timeleft/selectedDuration) * 816;
+    const progress = (timeleft/selectedDuration) * 660;
 
     garisJalan.style.strokeDashoffset = progress;
     display.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
