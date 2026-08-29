@@ -9,7 +9,7 @@ const halamanTimer = document.getElementById("halamanTimer");
 const titleSelected = document.getElementById("titleSelected");
 const tutupNotif = document.getElementById("tutupNotif");
 const notifStop = document.getElementById("notifStop");
-const timer = document.getElementById("timerSection");
+
 const garisJalan = document.getElementById("progressRingBar");
 
 const darkMode = document.getElementById("darkBtn");
@@ -62,6 +62,13 @@ const startTime = () => {
         if (timeleft <= 0) { 
             clearInterval(interval);
             interval = null;
+
+        confetti ({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+        })
+
             
             alarmSound.play().then(() => {
                 console.log("Audio berhasil diputar");
@@ -69,7 +76,7 @@ const startTime = () => {
                 console.log("alarm gagal diputar", error);
             });
             notifStop.style.display = "block";
-            timer.style.display = "none";
+            halamanTimer.style.display = "none";
             
             timeleft = selectedDuration; 
             updateTimer();
@@ -88,7 +95,7 @@ const closeNotif = () => {
     alarmSound.pause();
     alarmSound.currentTime = 0;
     notifStop.style.display = "none";
-    timer.style.display = "block";
+    halamanTimer.style.display = "block";
 };
 
 const resetTime = () => {
