@@ -12,6 +12,8 @@ const notifStop = document.getElementById("notifStop");
 const timer = document.getElementById("timerSection");
 const garisJalan = document.getElementById("progressRingBar");
 
+const darkMode = document.getElementById("darkBtn");
+
 let timeleft = 360; 
 // sisa waktu
 let selectedDuration = 360;
@@ -103,6 +105,21 @@ const pauseTime = () => {
     clearInterval(interval);
     interval = null; 
 }; 
+
+darkMode.addEventListener("click", function(){
+    document.body.classList.toggle("darkMode");
+
+    const borderBox = document.getElementById("border");
+    if (borderBox) {
+        borderBox.classList.toggle("darkMode");
+    }
+
+    if (document.body.classList.contains("darkMode")){
+        darkMode.textContent = "☀️";
+    } else {
+        darkMode.textContent = "🌙";
+    }
+})
 
 start.addEventListener("click", startTime);
 pause.addEventListener("click", pauseTime);
